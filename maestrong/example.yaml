@@ -17,12 +17,12 @@ ships:
   # vm4: {ip: 54.185.28.145}
 
 services:
-  # etcd:
-  #   image: davidbliu/etcd
-  #   instances:
-  #     etcd1:
-  #       ship: vm2
-  #       ports: {smtp: 4001}
+  etcd:
+    image: davidbliu/etcd
+    instances:
+      etcd1:
+        ship: vm2
+        ports: {smtp: 4001}
   cassandra:
     # image: davidbliu/acassa
     image: davidbliu/cassandra
