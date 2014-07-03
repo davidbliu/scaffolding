@@ -1,0 +1,3 @@
+FROM davidbliu/autorailsbase
+ADD asdf1.py /opt/dockernotes
+CMD python -u asdf1.py

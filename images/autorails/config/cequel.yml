@@ -1,0 +1,15 @@
+development:
+  hosts: &id001
+  - 54.184.184.23
+  - 54.188.5.77
+  - 54.189.247.174
+  keyspace: testapp_development
+  port: 9042
+production:
+  hosts: *id001
+  keyspace: testapp_production
+  port: 9042
+test:
+  hosts: *id001
+  keyspace: testapp_test
+  port: 9042

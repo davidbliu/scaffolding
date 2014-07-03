@@ -1,0 +1,17 @@
+FROM davidbliu/etcdbase
+ENV DEBIAN_FRONTEND noninteractive
+
+# get all the ruby on rails dependencies
+RUN apt-get install -y ruby ruby-dev libpq-dev build-essential
+RUN gem install sinatra bundler --no-ri --no-rdoc
+
+# sqlite3 and execjs stuff
+RUN sudo apt-get install libsqlite3-dev
+RUN sudo apt-get -y install nodejs
+
+ADD . /opt/dockernotes
+WORKDIR /opt/dockernotes
+RUN bundle install
+
+# EXPOSE 3000
+# CMD python etcdrun.py

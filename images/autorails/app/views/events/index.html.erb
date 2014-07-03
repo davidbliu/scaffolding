@@ -1,0 +1,5 @@
+<h1>These are my events</h1>
+<% @events.each do |event| %>
+	<div><%= event.type %>|<%= event.title %>|<%= event.properties %></div>
+<% end %>
+

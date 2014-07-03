@@ -1,0 +1,28 @@
+development:
+  # host: '127.0.0.1'
+  # hosts:
+  #   - '54.184.184.23'
+  #   - '54.188.5.77'
+  #   - '54.189.247.174'
+  # hosts:
+  #     - <%= ENV['CASSANDRA_1_ADDR'] %>
+  #     - <%= ENV['CASSANDRA_2_ADDR'] %>
+  #     - <%= ENV['CASSANDRA_3_ADDR'] %>
+  REPLACE_WITH_HOSTS
+  port: 9042
+  keyspace: testapp_development
+
+test:
+  host: '127.0.0.1'
+  port: 9042
+  keyspace: testapp_test
+
+production:
+  hosts:
+    - 'cass1.testapp.biz'
+    - 'cass2.testapp.biz'
+    - 'cass3.testapp.biz'
+  port: 9042
+  keyspace: testapp_production
+  username: 'myappuser'
+  password: 'password1'

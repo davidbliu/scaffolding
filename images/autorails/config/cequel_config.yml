@@ -1,0 +1,16 @@
+development:
+  hosts: &id001
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  keyspace: testapp_development
+  port: 9042
+production:
+  hosts: *id001
+  keyspace: testapp_production
+  port: 9042
+test:
+  hosts: *id001
+  keyspace: testapp_test
+  port: 9042
